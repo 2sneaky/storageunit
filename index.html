@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>store stuff</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>store stuff</h1>
+      <p class="muted">simple local storage organizer — add, edit, export, import</p>
+    </header>
+
+    <section class="controls">
+      <form id="itemForm" class="form">
+        <input id="name" placeholder="item name" required />
+        <input id="category" placeholder="category (e.g. tools)" />
+        <input id="qty" type="number" min="1" placeholder="qty" value="1" />
+        <input id="note" placeholder="note (optional)" />
+        <button id="saveBtn" type="submit">add item</button>
+      </form>
+
+      <div class="actions">
+        <input id="search" placeholder="search items or notes" />
+        <select id="filterCategory">
+          <option value="">all categories</option>
+        </select>
+        <button id="exportBtn">export json</button>
+        <input id="importFile" type="file" accept="application/json" />
+        <button id="clearAllBtn">clear all</button>
+      </div>
+    </section>
+
+    <section>
+      <ul id="itemsList" class="items"></ul>
+      <div id="empty" class="muted">no items yet</div>
+    </section>
+
+    <footer class="muted small">local-only demo. upgrade to a backend later if you want multi-device sync.</footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
